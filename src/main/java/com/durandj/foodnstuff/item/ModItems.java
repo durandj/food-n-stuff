@@ -17,6 +17,7 @@ public class ModItems
 	private static Item honeyJar;
 	private static Item macAndCheese;
 	private static Item milkJar;
+	private static Item miniDonuts;
 
 	private static Item masterSword;
 
@@ -27,6 +28,7 @@ public class ModItems
 		registerModel(honeyJar);
 		registerModel(macAndCheese);
 		registerModel(milkJar);
+		registerModel(miniDonuts);
 
 		registerModel(masterSword);
 	}
@@ -39,6 +41,7 @@ public class ModItems
 		macAndCheese = registerFoodItem("macandcheese", 9, Config.mealSaturation);
 		milkJar = registerFoodItem("milkjar", 5, Config.mealSaturation)
 			.addFoodEffect(new CureAllEffect()).setAlwaysEdible().setMaxStackSize(16);
+		miniDonuts = registerFoodItem("minidonuts", 1, Config.snackSaturation);
 
 		masterSword = registerItem(new MasterSword());
 	}
