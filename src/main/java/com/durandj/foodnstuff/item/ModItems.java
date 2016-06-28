@@ -18,6 +18,8 @@ public class ModItems
 	private static Item macAndCheese;
 	private static Item milkJar;
 
+	private static Item masterSword;
+
 	public static void registerItemModels()
 	{
 		registerModel(donutHoles);
@@ -25,6 +27,8 @@ public class ModItems
 		registerModel(honeyJar);
 		registerModel(macAndCheese);
 		registerModel(milkJar);
+
+		registerModel(masterSword);
 	}
 
 	public static void initItems()
@@ -35,6 +39,8 @@ public class ModItems
 		macAndCheese = registerFoodItem("macandcheese", 9, Config.mealSaturation);
 		milkJar = registerFoodItem("milkjar", 5, Config.mealSaturation)
 			.addFoodEffect(new CureAllEffect()).setAlwaysEdible().setMaxStackSize(16);
+
+		masterSword = registerItem(new MasterSword());
 	}
 
 	public static void initRecipes()
@@ -47,7 +53,7 @@ public class ModItems
 		manager.addRecipe(new ShapelessOreRecipe(milkJar, Items.GLASS_BOTTLE, "listAllmilk"));
 	}
 
-	private static FoodNStuffItemFood registerItem(FoodNStuffItemFood item)
+	private static Item registerItem(Item item)
 	{
 		return GameRegistry.register(item);
 	}
@@ -56,7 +62,7 @@ public class ModItems
 	{
 		FoodNStuffItemFood item = new FoodNStuffItemFood(name, healAmount, saturation);
 
-		return registerItem(item);
+		return (FoodNStuffItemFood) registerItem(item);
 	}
 
 	private static void registerModel(final Item item)
