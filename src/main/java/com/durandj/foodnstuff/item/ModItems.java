@@ -1,12 +1,10 @@
 package com.durandj.foodnstuff.item;
 
-import com.durandj.foodnstuff.FoodNStuff;
 import com.durandj.foodnstuff.handler.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -44,20 +42,16 @@ public class ModItems
 		manager.addRecipe(new ShapelessOreRecipe(milkJar, Items.GLASS_BOTTLE, "listAllmilk"));
 	}
 
-	private static Item registerItem(String name, Item item)
+	private static Item registerItem(Item item)
 	{
-		item.setCreativeTab(FoodNStuff.instance.creativeTab);
-		item.setRegistryName(name);
-		item.setUnlocalizedName(name);
-
 		return GameRegistry.register(item);
 	}
 
 	private static Item registerFoodItem(String name, int healAmount, float saturation)
 	{
-		Item item = new ItemFood(healAmount, saturation, false);
+		Item item = new FoodNStuffItemFood(name, healAmount, saturation);
 
-		return registerItem(name, item);
+		return registerItem(item);
 	}
 
 	private static void registerModel(final Item item)
