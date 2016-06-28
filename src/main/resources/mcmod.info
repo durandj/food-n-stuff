@@ -1,0 +1,16 @@
+[
+{
+  "modid": "foodnstuff",
+  "name": "Food n Stuff",
+  "description": "Extra foods and recipes for Minecraft",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "https://github.com/durandj/food-n-stuff",
+  "updateUrl": "",
+  "authorList": ["Durandj", "TheLinzyGirl", "Bexran"],
+  "credits": "My wife for ALL of the ideas",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
