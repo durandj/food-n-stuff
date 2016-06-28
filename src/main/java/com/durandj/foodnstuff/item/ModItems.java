@@ -6,16 +6,13 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.potion.PotionEffect;
-import net.minecraft.potion.PotionType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 public class ModItems
 {
+	private static Item donutHoles;
 	private static Item grapple;
 	private static Item honeyJar;
 	private static Item macAndCheese;
@@ -23,6 +20,7 @@ public class ModItems
 
 	public static void registerItemModels()
 	{
+		registerModel(donutHoles);
 		registerModel(grapple);
 		registerModel(honeyJar);
 		registerModel(macAndCheese);
@@ -31,6 +29,7 @@ public class ModItems
 
 	public static void initItems()
 	{
+		donutHoles = registerFoodItem("donutholes", 1, Config.snackSaturation);
 		grapple = registerFoodItem("grapple", 5, Config.mealSaturation);
 		honeyJar = registerFoodItem("honeyjar", 5, Config.mealSaturation);
 		macAndCheese = registerFoodItem("macandcheese", 9, Config.mealSaturation);

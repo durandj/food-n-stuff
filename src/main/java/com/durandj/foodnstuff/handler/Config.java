@@ -9,7 +9,8 @@ public class Config
 {
 	private static Configuration configuration;
 
-	public static float mealSaturation = 4.0f;
+	public static float snackSaturation;
+	public static float mealSaturation;
 
 	public static void init(FMLPreInitializationEvent event)
 	{
@@ -20,6 +21,15 @@ public class Config
 
 	private static void load()
 	{
+		snackSaturation = configuration.getFloat(
+			"snackSaturation",
+		    "general",
+			0.6000000238418579f,
+		    0.0f,
+		    20.0f,
+		    "Saturation provided by eating a snack"
+		);
+
 		mealSaturation = configuration.getFloat(
 			"mealSaturation",
 			"general",
