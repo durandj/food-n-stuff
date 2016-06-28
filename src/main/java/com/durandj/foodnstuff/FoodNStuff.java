@@ -12,8 +12,11 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-// TODO(durandj): add harvestcraft dependency
-@Mod(modid = FoodNStuff.MOD_ID, name = FoodNStuff.NAME, version = FoodNStuff.VERSION, dependencies = "")
+@Mod(
+	modid = FoodNStuff.MOD_ID,
+	name = FoodNStuff.NAME,
+	version = FoodNStuff.VERSION,
+	dependencies = "required-after:Forge@[12.17.0.1976,);required-after:harvestcraft@[1.9.4c,)")
 public class FoodNStuff
 {
 	public static final String MOD_ID = "foodnstuff";
