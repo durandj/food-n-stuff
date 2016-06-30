@@ -25,6 +25,7 @@ import java.util.List;
 
 public class ModItems
 {
+	private static Item chorizo;
 	private static Item donutHoles;
 	private static Item grapple;
 	private static Item honeyJar;
@@ -41,6 +42,7 @@ public class ModItems
 	@SideOnly(Side.CLIENT)
 	public static void registerItemModels()
 	{
+		registerModel(chorizo);
 		registerModel(donutHoles);
 		registerModel(grapple);
 		registerModel(honeyJar);
@@ -57,6 +59,7 @@ public class ModItems
 
 	public static void initItems()
 	{
+		chorizo = registerFoodItem("chorizo", 5, Config.mealSaturation);
 		donutHoles = registerFoodItem("donutholes", 1, Config.snackSaturation);
 		grapple = registerFoodItem("grapple", 5, Config.mealSaturation);
 		honeyJar = registerFoodItem("honeyjar", 5, Config.mealSaturation);
