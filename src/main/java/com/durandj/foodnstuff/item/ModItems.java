@@ -32,6 +32,7 @@ public class ModItems
 	private static Item milkJar;
 	private static Item miniDonuts;
 	private static Item relish;
+	private static Item salsa;
 	private static Item sauerkraut;
 
 	private static Item masterSword;
@@ -47,6 +48,7 @@ public class ModItems
 		registerModel(milkJar);
 		registerModel(miniDonuts);
 		registerModel(relish);
+		registerModel(salsa);
 		registerModel(sauerkraut);
 
 		registerModel(masterSword);
@@ -63,6 +65,7 @@ public class ModItems
 			.addFoodEffect(new CureAllEffect()).setAlwaysEdible().setMaxStackSize(16);
 		miniDonuts = registerFoodItem("minidonuts", 1, Config.snackSaturation);
 		relish = registerFoodItem("relish", 3, Config.snackSaturation);
+		salsa = registerFoodItem("salsa", 5, Config.snackSaturation);
 		sauerkraut = registerFoodItem("sauerkraut", 3, Config.snackSaturation);
 
 		masterSword = registerItem(new MasterSword());
