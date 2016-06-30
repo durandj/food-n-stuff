@@ -29,6 +29,7 @@ public class ModItems
 	private static Item donutHoles;
 	private static Item grapple;
 	private static Item honeyJar;
+	private static Item krabbyPatty;
 	private static Item macAndCheese;
 	private static Item milkJar;
 	private static Item miniDonuts;
@@ -46,6 +47,7 @@ public class ModItems
 		registerModel(donutHoles);
 		registerModel(grapple);
 		registerModel(honeyJar);
+		registerModel(krabbyPatty);
 		registerModel(macAndCheese);
 		registerModel(milkJar);
 		registerModel(miniDonuts);
@@ -63,6 +65,7 @@ public class ModItems
 		donutHoles = registerFoodItem("donutholes", 1, Config.snackSaturation);
 		grapple = registerFoodItem("grapple", 5, Config.mealSaturation);
 		honeyJar = registerFoodItem("honeyjar", 5, Config.mealSaturation);
+		krabbyPatty = registerFoodItem("krabbypatty", 7, Config.mealSaturation);
 		macAndCheese = registerFoodItem("macandcheese", 9, Config.mealSaturation);
 		milkJar = registerFoodItem("milkjar", 5, Config.mealSaturation)
 			.addFoodEffect(new CureAllEffect()).setAlwaysEdible().setMaxStackSize(16);
