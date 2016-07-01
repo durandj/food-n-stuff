@@ -88,6 +88,7 @@ public class ModItems
 	{
 		CraftingManager manager = CraftingManager.getInstance();
 
+		manager.addRecipe(new ShapelessOreRecipe(chorizo, "toolCuttingboard", "listAllmeatcooked", "cropSpiceleaf"));
 		manager.addRecipe(new ShapelessOreRecipe(grapple, Items.APPLE, "foodGrapejuice"));
 		manager.addRecipe(new ShapelessOreRecipe(honeyJar, Items.GLASS_BOTTLE, Item.getByNameOrId("harvestcraft:honeyItem")));
 		manager.addRecipe(new ShapelessOreRecipe(macAndCheese, Items.BOWL, "foodCheese", "foodPasta"));
